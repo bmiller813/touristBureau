@@ -28,7 +28,7 @@ categoriesElement.addEventListener("change", () => {
 
             if (activity.price > 0) {
                 div.innerHTML += " $" + activity.price.toFixed(2) + " ";
-                let button = document.createElement("div");
+                let button = document.createElement("button");
                 button.innerHTML += "BUY";
                 div.appendChild(button);
             };

@@ -10,7 +10,8 @@ console.log("2b")
 for (i = 0; i < categories.length; i++) {
     console.log(categories[i]);
     const option = document.createElement("option");
-    option.innerHTML = categories[i];
+    option.innerHTML = "difficulty: " + categories[i];
+    option.value = categories[i];
     category.appendChild(option);
 }
 

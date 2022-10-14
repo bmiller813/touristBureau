@@ -1,6 +1,13 @@
 
 //Fill category select options from list of categories above
 let categoriesElement = document.getElementById("categories");
+if(categoriesElement == null){
+    console.log("categories element not found");
+}
+let activitiesElement = document.getElementById("activities");
+if(activitiesElement == null){
+    console.log("Activities element not found");
+}
 function addCategory(text) {
     let o = document.createElement("option");
     o.innerHTML = text;
@@ -17,7 +24,7 @@ categoriesElement.addEventListener("change", () => {
         if (activity.category == category) {
             let div = document.createElement("div");
             div.innerHTML ="<div>" + activity.name + "</div>";
-            div.innerHTML ="<img src=\"" + activity.id + "\" >" ;
+            //div.innerHTML ="<img src=\"" + activity.id + "\" >" ;
 
             if (activity.price > 0) {
                 div.innerHTML += " $" + activity.price.toFixed(2) + " ";
